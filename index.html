@@ -93,13 +93,16 @@
 
 
 
+<meta name="description" content="Technology Blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="fengzifneg&#39;blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="fengzifneg&#39;blog">
+<meta property="og:description" content="Technology Blog">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="fengzifneg&#39;blog">
+<meta name="twitter:description" content="Technology Blog">
 
 
 
@@ -176,7 +179,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">keep hungry stay foolish</p>
       
   </div>
 
@@ -322,126 +325,29 @@
       
         
           
-            
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/24/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="冯子丰">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengzifneg'blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/24/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-24T12:04:07+08:00">
-                2017-07-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <p>runtime详解</p>
+<p>1，runtime的核心—消息传递</p>
+<p>在[object foo]在运行的过程中会给object发送foo消息，但是这个消息可能会被转发到另一个对象，也可能<br>并不会立即执行foo这个发放的代码。它在运行时给object发送一个叫foo的消息，这个消息也许会由object来处理。也许会转发给另一个对象，或者不接收这个消息有另一个方法来实现这个消息<br>在编译时，Object-C函数调用的语法会被编译成一个C的函数调用 - objc_mesSend()，- objc_mesSend(object, @selector(), arg)</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> objc_object &#123;  </div><div class="line">    Class isa  OBJC_ISA_AVAILABILITY;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> objc_class &#123;  </div><div class="line">    Class isa  OBJC_ISA_AVAILABILITY;</div><div class="line"><span class="meta">#if !__OBJC2__</span></div><div class="line">    Class super_class;</div><div class="line">    <span class="keyword">const</span> <span class="keyword">char</span> *name;</div><div class="line">    <span class="keyword">long</span> version;</div><div class="line">    <span class="keyword">long</span> info;</div><div class="line">    <span class="keyword">long</span> instance_size;</div><div class="line">    <span class="keyword">struct</span> objc_ivar_list *ivars;</div><div class="line">    **<span class="keyword">struct</span> objc_method_list **methodLists**;</div><div class="line">    **<span class="keyword">struct</span> objc_cache *cache**;</div><div class="line">    <span class="keyword">struct</span> objc_protocol_list *protocols;</div><div class="line"><span class="meta">#endif</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">struct</span> objc_method_list &#123;  </div><div class="line">    <span class="keyword">struct</span> objc_method_list *obsolete;</div><div class="line">    <span class="keyword">int</span> method_count;</div><div class="line"></div><div class="line"><span class="meta">#ifdef __LP64__</span></div><div class="line">    <span class="keyword">int</span> space;</div><div class="line"><span class="meta">#endif</span></div><div class="line"></div><div class="line">    <span class="comment">/* variable length structure */</span></div><div class="line">    <span class="keyword">struct</span> objc_method method_list[<span class="number">1</span>];</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> objc_method &#123;  </div><div class="line">    SEL method_name;</div><div class="line">    <span class="keyword">char</span> *method_types;    <span class="comment">/* a string representing argument/return types */</span></div><div class="line">    IMP method_imp;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>从API中可以看出oc的对象是一个指向objc_object（对象）结构体的指针。Class是一个指向objc_class（类）结构体的指针。每个结构体中都包含一个isa指针，isa指针指向的类结构。<br>objc_mesSend(object, @selector(), arg) 消息传递的过程是：先通过object的isa指针找到class,在class的object_cache找到改函数（object_cache是以method_name作为key,method_imp为value存储的能够直接查找），如果object_cache找不到会从class的methodList找改函数（从API中可以看出methodList其实是一个数组，查找效率太低），再找不到会从他的superclass中找，如果再找不到，如果我们不做特殊处理程序就会挂掉</p>
+<p>2，消息传递补救:</p>
+<p>如果消息未被实现时，runtime调用resolveInstanceMethod实现</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">+ (<span class="built_in">BOOL</span>)resolveInstanceMethod:(SEL)aSEL </div><div class="line">&#123;</div><div class="line">    <span class="comment">//添加某个方法的实现</span></div><div class="line">    <span class="keyword">if</span>(aSEL == name)&#123;</div><div class="line">        class_addMethod(Class cls, SEL name, IMP imp,</div><div class="line">                    <span class="keyword">const</span> <span class="keyword">char</span> *types)</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>resolveInstanceMethod:方法返回YES时系统会从新发送一次消息，在返回YES之前添加没有实现的方法<br>如果resolveInstanceMethod没有特殊处理系统会调用forwardingTargetForSelector方法把消息转发给另一个对象</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">id</span>)forwardingTargetForSelector:(SEL)aSelector</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(aSelector == SEL)&#123;</div><div class="line">        <span class="keyword">return</span> newObject;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> [<span class="keyword">super</span> forwardingTargetForSelector:aSelector];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当forwardingTargetForSelector返回nil,系统会发送methodSignatureForSelector消息获得函数的返回值类型。如果 -methodSignatureForSelector: 返回 nil ，系统会发出doesNotRecognizeSelector消息，这时就无力会天了。如果返回了一个函数签名，Runtime 就会创建一个 NSInvocation 对象并发送 -forwardInvocation: 消息给目标对象。</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSMethodSignature</span> *)methodSignatureForSelector:(SEL)aSelector</div><div class="line">&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>runtime使用的几种场景</p>
+<p>1，添加category属性（关联对象）</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">objc_setAssociatedObject(<span class="keyword">id</span> object, <span class="keyword">const</span> <span class="keyword">void</span> *key, <span class="keyword">id</span> value, objc_AssociationPolicy policy)</div><div class="line">objc_getAssociatedObject(<span class="keyword">id</span> object, <span class="keyword">const</span> <span class="keyword">void</span> *key)</div></pre></td></tr></table></figure>
+<p>程序会在执行某个类的load，initialize方法时候执行分类属性<br>category不能够直接添加属性是因为oc的对象objc_class结构体大小是固定的，不可能往这个结构体中添加数据，只能修改<br>category能够直接添加方法是因为oc的对象的objc_object结构体里面的methodList是一个二维数组，所以可以修改*methodLists的值来增加成员方法，虽没办法扩展methodLists指向的内存区域，却可以改变这个内存区域的值</p>
+<p>2，动态得到属性和方法</p>
+<p>（1）获取property属性：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> outCount;</div><div class="line">objc_property_t *objc_property_t = class_copyPropertyList([<span class="keyword">self</span> <span class="keyword">class</span>], &amp;outCount)</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; outCount; i ++) &#123;</div><div class="line">    objc_property_t property = properties[i];</div><div class="line">    <span class="built_in">NSString</span> * propertyName = [[<span class="built_in">NSString</span> stringWithCString:property_getName(property) encoding:<span class="built_in">NSUTF8StringEncoding</span>];</div><div class="line">&#125;</div><div class="line">```      </div><div class="line">（<span class="number">2</span>）获取所有属性</div><div class="line"></div><div class="line">```objectivec</div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> outCount;</div><div class="line">Ivar * ivars = class_copyIvarList([<span class="keyword">self</span> <span class="keyword">class</span>], &amp;outCount);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; outCount; i ++) &#123;</div><div class="line">    Ivar ivar = ivars[i];</div><div class="line">    <span class="built_in">NSString</span> * name = [<span class="built_in">NSString</span> stringWithUTF8String:ivar_getName(ivar)];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>（3）得到方法列表class_copyMethodList </p>
+<p>3，方法替换（method swizzling）</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//newFoo将要替换的函数，oldFoo被替换的函数</span></div><div class="line"><span class="comment">//获取方法的实现</span></div><div class="line">IMP newImp = class_getMethodImplementation([<span class="keyword">self</span> <span class="keyword">class</span>], <span class="keyword">@selector</span>(newFoo));</div><div class="line"><span class="comment">//动态添加方法</span></div><div class="line">class_addMethod(Class, <span class="keyword">@selector</span>(newFoo), newImp, types);</div><div class="line"><span class="comment">//动态替换方法实现</span></div><div class="line">class_replaceMethod(peopleClass, <span class="keyword">@selector</span>(oldFoo), newImp, types);</div></pre></td></tr></table></figure>
+<p>method swizzling需要写在load方法里面（load调用时机是被在到runtime时，只调用一次，可以看看runtime源码）</p>
 
           
         
@@ -514,7 +420,7 @@
                alt="冯子丰" />
           <p class="site-author-name" itemprop="name">冯子丰</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Technology Blog</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -522,7 +428,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
